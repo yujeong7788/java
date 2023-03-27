@@ -360,6 +360,165 @@ public class LoopFor {
 			
 			System.out.println("6 x " + i + " = " + (6*i));
 		}
-	}
+		
+		System.out.println("\n==========이중 for문============\n");
+		
+		// 이중 for문
+		// 구구단 출력
+		// 2 x 2 = 4
+		// 2 x 3 = 6
+		// 2 x 9 = 18
+		// 3 x 2 = 6
+		// 3 x 3 = 9
+		// 9 x 9 = 81
+		
+		for(int left = 2; left <= 9; left++) {
+			
+			for(int right = 2; right <= 9; right++) {
+				System.out.println("left: " + left);
+				System.out.println("right: " + right);
+				System.out.println(left + " x " + right + " = " + (left*right));
+			}
+		}
+		
+		/*
+		 디버깅 모드
+		 코드라인 좌측 연두색 부분을 더블클릭하여
+		 녹색 점(break point)를 만든 후 디버깅 실행
+		 break point 생성/해제 단축키 [Ctrl + Shift + B]
+		 디버깅 실행 단축키 [F11]
+		 
+		 디버깅 목적
+		 코드를 한줄한줄 실행해보며, 변수에 어떤 값이
+		 담기고 있는지 확인해볼 수 있다.
+		 
+		 디버깅 실행 (상단 벌레 모양 아이콘 클릭)
+		 처음에 디버깅 모드에 적합한 화면(Perspective)
+		 전환 여부 묻는 창이 뜬다. (전환 하기)
+		 
+		 코드들이 쭉 실행되다가 breakpoint가 있는
+		 지점에 멈춰서 실행 대기를 한다.
+		 
+		 이후 상단의 Run - step over [단축키 F6]을 눌러
+		 한줄한줄 코드를 실행해본다.
+		 
+		 디버깅 모드를 종료하시려면 Terminate 
+		 [단축키 Ctrl + F2] (콘솔창 족에 뜨는 빨간색 중지 버튼)
+		 
+		 이후 원래 화면(Perspective)으로 돌아오려면
+		 우측 상단에서 Java Perspective를 클릭
+		 
+		 Step over F6
+		 
+		 
+		 */
+		
+		System.out.println("\n======================\n");
+		
+		// 트리
+		// 		*
+		// 	   **
+		//    ***
+		//   ****
+		//  *****
+		System.out.println("    " + "*"); // 공백 4
+		System.out.println("   " + "**");
+		System.out.println("  " + "***");
+		System.out.println(" " + "****");
+		System.out.println("" + "*****");
+		
+		// i는 0,1,2,3,4
+		// 공백은 4,3,2,1,0개
+		// *은 1,2,3,4,5개
+		
+		String sleft = " ";
+		String sright = "*";
+		
+//		for(int left =0; left <= 4; left--) {
+//			
+//			sleft += " ";
+//			
+//			for(int right = 0; right <= 5; right++) {
+//				System.out.println("left: " + left);
+//				System.out.println("right: " + right);
+//				sright += "*";
+//				System.out.println(sleft  + right);
+//			}
+//		}
+		System.out.println("\n======================\n");
+		
+		for(int i = 0; i < 5; i++) {
+			// 외부 for문의 변수 i를 이용하여
+			// 내부 for문의 반복횟수를 조정할 수 있다.
+			String space ="";
+			for(int k = 0; k < 4-i; k++) {
+				space += " ";
+			}
+			
+			String stars = "";
+			for(int k = 0; k < i+1; k++)
+				stars += "*";
+			System.out.println(space + stars);
+		}
+		
+		System.out.println("\n======================\n");
+		
+		//     *
+		//    ***
+		//   *****
+		//  *******
+		// *********
+		
+		// for문에 5번 실행
+		// i가 0,1,2,3,4일때
+		// 공백은 4,3,2,1,0
+		// *은 1,3,5,7,9
+		
+		
+		for(int i = 0; i < 5; i++) {
+			// 외부 for문의 변수 i를 이용하여
+			// 내부 for문의 반복횟수를 조정할 수 있다.
+			String space ="";
+			for(int k = 0; k < 4-i; k++) {
+				space += " ";
+			}
+			
+			String stars = "";
+			for(int k = 0; k < 2*i+1; k++)
+				stars += "*";
+			System.out.println(space + stars);
+		}
+		
+		System.out.println("\n======================\n");
 
+		
+		// *********
+		//  *******
+		//   *****
+		//    ***
+		//     *
+		
+		// for문에 5번 실행
+		// i가 0,1,2,3,4일때
+		// 공백은 0,1,2,3,4
+		// *은 9,7,5,3,1		
+		
+		for(int i = 0; i < 5; i++) {
+			// 외부 for문의 변수 i를 이용하여
+			// 내부 for문의 반복횟수를 조정할 수 있다.
+			String space ="";
+			for(int k = 0; k < i; k++) {
+				space += " ";
+			}
+			
+			String stars = "";
+			for(int k = 0; k < 9-(2*i) ; k++)
+				stars += "*";
+			System.out.println(space + stars);
+		}
+		
+		
+	}
+	
+	
 }
