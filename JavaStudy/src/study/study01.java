@@ -11,6 +11,8 @@ public class study01 {
 		//.clone 까먹었다
 		String[] copy = new String[seoyugi.length];
 
+		
+		ddd
 	}
 
 }
