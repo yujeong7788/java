@@ -10,6 +10,7 @@ public class submit05 {
 		//Q01
 		makeTree(5);
 		makeTree(7);
+		makeTree(20);
 		
 		System.out.println("\n===========@문제===========\n");
 		
