@@ -12,7 +12,6 @@ public class study01 {
 		String[] copy = new String[seoyugi.length];
 
 		
-		ddd
 	}
 
 }
