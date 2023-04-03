@@ -1,98 +1,118 @@
 package JANGYUJEONG.submit07;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class submit07 {
-
 	public static void main(String[] args) {
-		//Q01
-		//한국 배우들의 명단을 배열로 만들어보았습니다.
-		//for문을 이용하여 "이"씨 성을 가진 사람이 몇명인지 출력해주세요.
+		System.out.println("\n=============Q01-1=============\n");
+		// QO1
+		// 정수를 담을 수 있는 ArrayList 객체를 생성하고,
+		// 10부터 20 사이의 랜덤 숫자를 10개 담으시오.
+		// (10도 나오고 20도 나올수 있어야 함)
 		
-		String[] nameList = {"이정재", "김혜수", "이병헌", "송중기", "유아인", "류준열", "공유", "마동석", "이종석", "황정민", "박소담", "이선균", "이성민", "최민식", "이동휘", "권상우", "소지섭", "공효진", "조정석", "허성태", "이하늬"};
-		int count = 0;
-		for(int i = 0; i < nameList.length; i++) {
-			if(nameList[i].substring(0,1).equals("이")) {
-				count++;
-			}
-		}
-		System.out.println("이씨 성을 가진 배우가 " + count + "명 있습니다.");
+
+		ArrayList<Integer> answer = new ArrayList<>();
 		
-		
-		System.out.println("\n===========Q02============\n");
-		
-		//Q02
-//		최댓값, 최솟값 구하기
-//		for문을 이용해 intArr의 최댓값과 최솟값을 출력해주세요.
-		
-		int[] intArr = {23, 456, 213, 32, 464, 1, 2, 4};
-		for(int i = 0; i < intArr.length - 1; i++ ) {
+		int idx = 0;
+		outer: while(true) {
+			int rand = (int)(Math.random()*(20-10)) + 10;
 			
-			if(intArr[i] > intArr[i+1]) {
-				int t = intArr[i];
-				intArr[i] = intArr[i+1];
-				intArr[i+1] = t;
+			answer.add(rand);
+			idx++;
+			
+			if(idx == 10) {
+				break;
 			}
 			
 		}
+		System.out.println(answer);
 		
-		for(int k = 0; k < intArr.length -1 ; k++) {
-					
-					for(int i = 0; i < intArr.length -1; i++) {
-						// i > i+1 하면 오름차순
-						// i < i+1 하면 내림차순
-						if(intArr[i] < intArr[i+1]) {
-							int t = intArr[i];
-							intArr[i] = intArr[i+1];
-							intArr[i+1] = t;
-						}
-						
-					}
-					
+		System.out.println("\n=============Q01-2=============\n");
+		// 중복 제거 후 출력
+		// hint 새로운 빈 리스트 만드시고, 거기에 중복되지 않게끔 값들을 옮기세요
+		ArrayList<Integer> removeAnswer = new ArrayList<>();
+		removeAnswer.addAll(answer);
+			// 중복 제거
+		for(int i = 0; i <removeAnswer.size(); i++ )
+			for(int j = 0; j < i; j++) {
+				if(removeAnswer.get(i) == removeAnswer.get(j)) {
+					removeAnswer.remove(removeAnswer.get(i));
+					i--;
+//					System.out.println("현재배열:"+removeAnswer);
 				}
-		System.out.println("최댓값: " + intArr[0] );
-		System.out.println("최솟값: " + intArr[intArr.length - 1] );
+			} 	
+				
+		System.out.println(removeAnswer);
 		
-		System.out.println("\n===========Q03============\n");
+		System.out.println("\n=============Q01-3=============\n");
+		// 오름차순
+		Collections.sort(removeAnswer);
+		System.out.println(removeAnswer);
 		
-		//Q03
-//		로또 번호 생성기
-//		1~45 까지의 랜덤 숫자 6개를 배열에 중복되지 않도록 담고,
-//		이를 정렬한 배열을 리턴하는 makeLotto() 함수를 만들어주세요.
-		
-		int [] myLotto = makeLotto();
-		for(int i = 0; i < myLotto.length; i++) {
-			System.out.print(myLotto[i] + " ");
-		}
-		
-		
-
-		
-	} // main 끝
-	
-	
-	
-	public static void printArray(int[] intArray) {
-		for(int i = 0; i < intArray.length ; i++) {
-			// i가 마지막일때에는 뒤에 콤마(,)를
-			// 붙이지 않고, 개행문자도 넣는다.
+		System.out.println("\n=============Q01-4=============\n");
+		// 내림차순
+		// 모두 -1 곱해서 하는방법 사용 할 것
+		for(int i = 0; i < removeAnswer.size() -1; i++) {
 			
-			if (i == intArray.length - 1) {
-				System.out.println(intArray[i]);
-			}else {
-				System.out.print(intArray[i] + " ");
+			for(int k = 0; k < removeAnswer.size() -1; k++) {
+				// i > i+1 하면 오름차순
+				// i < i+1 하면 내림차순
+				if(removeAnswer.get(k) < removeAnswer.get(k+1)) {
+					int t = removeAnswer.get(k);
+					removeAnswer.get(removeAnswer.get(k+1));
+					removeAnswer.get(t);
+				}
+				
 			}
-			
 		}
-	}	
-	
-	
-	public static int[] makeLotto(){
-		int[] intArray = new int[7];
-		for(int i = 0; i < 7; i++) {
-			intArray[i] = (int)(Math.random() * 45) + 1;
-		}
+		System.out.println(removeAnswer);
+		
+	//		Q. 02
+	//
+	//
+	//		아내가 사고 싶은 물건  ["냉장고", "로봇청소기", "세탁기", "에어컨"] 을 리스트에 담아주세요.
+	//				
+	//		남편이 사고 싶은 물건 ["노트북", "TV", "에어컨", "플레이스테이션", "로봇청소기"] 을 다른 리스트에 담아주세요.
+	//				
+	//
+	//		1. 서로 사고 싶은 물건 목록을 새로운 리스트에 담아 콘솔에 출력해주세요(교집합)
+	//
+	//		Hint
+	//		빈 리스트를 하나 만들고, 아내의 구매목록 리스트를 for문을 이용하여 순회하고, 
+	//		각 구매 물품이 남편의 구매목록 리스트에 존재하는지 체크한다.
+	//		만약 존재한다면 빈 리스트에 해당 물품을 저장한다.
+	//
+	//
+	//		2. 사고 싶은걸 다 산다고 했을때의 구매 목록을 새로운 리스트에 담아 콘솔에 출력해주세요(합집합)
+	//
+	//		Hint
+	//		빈 리스트를 하나 만들고, 아내의 구매목록을 전부 담는다.
+	//		이후 남편의 구매목록 리스트를 for문을 이용하여 순회하고, 
+	//		남편의 구매 물품이 빈 리스트에 존재하지 않는다면 빈 리스트에 해당 물품을 추가한다.
 
-		return intArray;
-	}
+		
+		
+//		System.out.println((int)(Math.random()*20) + 1);
+		
+		// @문제
+		// 숫자 a부터 b사이의 랜덤 정수를 리턴해주는 메소드
+//		int rand = makeRandom(10,20);
+//		System.out.println(rand);
+		
+	}// main 끝
 	
-
+//	public static int makeRandom(int to, int from) {
+//		
+//		while(true) {
+//			int ran = (int)(Math.random() * from) + 1;
+//			if(ran < to) {
+//				continue;
+//			}else {
+//				int value = ran;
+//			}
+//		}
+//		
+//		return value;
+	
 }
