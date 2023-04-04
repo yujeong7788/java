@@ -62,12 +62,11 @@ public class submit08 {
 			
 			
 			// 아이디 키값 같은지 확인
-			// 순회
-			Set<String> idkeySet = infoMap.keySet();
 				if(infoMap.containsKey(id)) {
 					// 아이디 이거일때 비밀번호 맞는지 확인
 					// 키와 값 일치하는지 확인
-					if(infoMap.containsValue(pw)){
+					String pwVal = infoMap.get(id);
+					if(pwVal.equals(pw)){
 						System.out.println("로그인 성공");
 						break;
 					}else {
