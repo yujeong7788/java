@@ -35,17 +35,17 @@ public class submit07_answer {
 		System.out.println(newList);
 		
 		// 중복 제거 02
-//		for(int i = 0; i < intList.size(); i++) {
-//			
-//			for(int k = intList.size() - 1; k > 0; k--) {
-//				if(intList.get(i) == intList.get(k)) {
-//					intList.remove(k);
-//				}
-//			}
-//			
-//		}
-//		System.out.println(intList);
-//		
+		for(int i = 0; i < intList.size(); i++) {
+			
+			for(int k = intList.size() - 1; k > i; k--) {
+				if(intList.get(i) == intList.get(k)) {
+					intList.remove(k);
+				}
+			}
+			
+		}
+		System.out.println(intList);
+		
 		
 		//Q02
 		ArrayList<String> wipeList = new ArrayList<>();
