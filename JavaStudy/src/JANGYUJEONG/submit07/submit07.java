@@ -52,11 +52,10 @@ public class submit07 {
 		
 		System.out.println("\n=============Q01-4=============\n");
 		// 내림차순
-		// 모두 -1 곱해서 하는방법 사용 할 것
 		for(int i = 0; i < removeAnswer.size() -1; i++) {
 			
 			for(int k = 0; k < removeAnswer.size() -1; k++) {
-				// i > i+1 하면 오름차순
+				// i > i+1 하면 오름차순 
 				// i < i+1 하면 내림차순
 				if(removeAnswer.get(k) < removeAnswer.get(k+1)) {
 					int t = removeAnswer.get(k);
