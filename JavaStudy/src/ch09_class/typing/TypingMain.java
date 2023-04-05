@@ -44,16 +44,19 @@ public class TypingMain {
 		
 		while(true) {
 			
-			// wordList에 담긴 단어가 출력
-			System.out.println(wordList.get(0));
+			// wordList에 담긴 단어가 랜덤하게 출력
+			// = Math.random() 실행 결과가 wordList의 인덱스 중 하나
+			// = wordList의 인덱스 0 ~ wordList.size()-1
+			int randIdx = (int)(Math.random()*wordList.size());
+			System.out.println(wordList.get(randIdx));
 			
 			// 출력된 단어를 입력
 			System.out.println(">>> ");
 			String input = scan.nextLine();
 			// 입력한 단어가 출력된 단어와 일치하는지 체크
-			if(wordList.get(0).equals(input)) {
+			if(wordList.get(randIdx).equals(input)) {
 				// 일치한다면 wordList에서 해당 단어를 삭제
-				wordList.remove(0);
+				wordList.remove(randIdx);
 			}
 			// 일치하지않으면 해당 단어가 삭제되지 않고 또 입력 받음
 			
