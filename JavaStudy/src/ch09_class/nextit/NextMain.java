@@ -205,13 +205,16 @@ public class NextMain {
 		// stuList [지혜][준하][혜라][준호][준하][자영]
 		
 		// 오름차순
-		for(int i = 0; i < stuList.size() -1; i++) {
-			if(stuList.get(i).level > stuList.get(i+1).level) {
-				NextStudent t = stuList.get(i);
-				stuList.set(i, stuList.get(i+1));
-				stuList.set(i+1, t);
-			}
+		for(int k = 0; k < stuList.size() -1 ; k++) {
+			for(int i = 0; i < stuList.size() -1; i++) {
+				if(stuList.get(i).level > stuList.get(i+1).level) {
+					NextStudent t = stuList.get(i);
+					stuList.set(i, stuList.get(i+1));
+					stuList.set(i+1, t);
+				}
+			}	
 		}
+		
 		System.out.println("\n===================버블정렬(오름차순)==================\n");
 		
 		for(int i = 0; i <stuList.size(); i++) {
@@ -220,13 +223,16 @@ public class NextMain {
 		
 		
 		// 내림차순
-		for(int i = 0; i > stuList.size() -1; i++) {
-			if(stuList.get(i).level > stuList.get(i+1).level) {
-				NextStudent t = stuList.get(i);
-				stuList.set(i, stuList.get(i+1));
-				stuList.set(i+1, t);
+		for(int k = 0; k < stuList.size() -1 ; k++) {
+			for(int i = 0; i < stuList.size() -1; i++) {
+				if(stuList.get(i).level < stuList.get(i+1).level) {
+					NextStudent t = stuList.get(i);
+					stuList.set(i, stuList.get(i+1));
+					stuList.set(i+1, t);
+				}
 			}
 		}
+		
 		
 		System.out.println("\n===================버블정렬(내림차순)==================\n");
 		for(int i = 0; i <stuList.size(); i++) {
