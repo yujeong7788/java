@@ -3,6 +3,8 @@ package ch09_class.nextit;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import ch09_class.school.Student;
+
 // main 메소드를 보유하고 있는 클래스 (실행의 주체가 됨)
 public class NextMain {
 
@@ -263,6 +265,9 @@ public class NextMain {
 		for(int i = 0; i < stuList.size(); i++) {
 			System.out.println((i+1)+"등. "+stuList.get(i));
 		}
+		
+//		Student temp = new Student(); // 기본생성자도 필드변수와 같음
+//		System.out.println(temp.kor); //default 다른폴더에선 안보임, public만 보임 
 	}
 
 }

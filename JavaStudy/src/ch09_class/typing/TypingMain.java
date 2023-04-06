@@ -10,30 +10,40 @@ public class TypingMain {
 		Scanner scan = new Scanner(System.in);
 		
 		// 단어 목록
-		ArrayList<String> wordList = new ArrayList<>();
+		// 딕셔너리 선언
+		// static 메소드는 해당 클래스를 굳이 객체로 만들지
+		// 않더라도 사용이 가능하다.
+		// ex) Math.random()
 		
-		wordList.add("장유정");
-		wordList.add("배준호");
-		wordList.add("고동욱");
-		wordList.add("박혜라");
-		wordList.add("정현진");
-		wordList.add("홍민경");
-		wordList.add("박진영");
-		wordList.add("김대일");
-		wordList.add("박창연");
-		wordList.add("최성복");
-		wordList.add("이자영");
-		wordList.add("백민기");
-		wordList.add("유동윤");
-		wordList.add("강지혜");
-		wordList.add("김태윤");
-		wordList.add("박준하");
-		wordList.add("주예슬");
-		wordList.add("윤종현");
-		wordList.add("류서영");
-		wordList.add("신경호");
-		wordList.add("김청아");
-		wordList.add("김현곤");
+		Dictionary dict = new Dictionary(); // 객체 만든거
+		ArrayList<String> wordList = Dictionary.makeWordList(Dictionary.OPTION_RANDOM_ALPHABET);
+//		System.out.println(Dictionary.optionStudentName);
+		
+//		System.out.println(dict.optionCodingWord); // static안붙이면 객체 만들어서 사용해야함
+//		ArrayList<String> wordList = new ArrayList<>();
+		
+//		wordList.add("장유정");
+//		wordList.add("배준호");
+//		wordList.add("고동욱");
+//		wordList.add("박혜라");
+//		wordList.add("정현진");
+//		wordList.add("홍민경");
+//		wordList.add("박진영");
+//		wordList.add("김대일");
+//		wordList.add("박창연");
+//		wordList.add("최성복");
+//		wordList.add("이자영");
+//		wordList.add("백민기");
+//		wordList.add("유동윤");
+//		wordList.add("강지혜");
+//		wordList.add("김태윤");
+//		wordList.add("박준하");
+//		wordList.add("주예슬");
+//		wordList.add("윤종현");
+//		wordList.add("류서영");
+//		wordList.add("신경호");
+//		wordList.add("김청아");
+//		wordList.add("김현곤");
 		
 		// 현재 시간 저장
 		// 1970년 1월 1일을 기준으로
