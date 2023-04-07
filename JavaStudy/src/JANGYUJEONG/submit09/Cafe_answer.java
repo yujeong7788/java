@@ -18,6 +18,9 @@ public class Cafe_answer {
 		this.name = name;
 //		menuList = new ArrayList<>();
 	}
+	public Cafe_answer(String name2, int i) {
+	}
+
 	// 커피 메뉴를 추가한다
 	public void addCoffee(Coffee cf) {
 		menuList.add(cf);
