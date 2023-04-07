@@ -21,6 +21,26 @@ public class Coffee {
 	public String toString() {
 		return drinkname + " : " + drinkprice;
 	}
+
+	public String getDrinkname() {
+		return drinkname;
+	}
+
+	public void setDrinkname(String drinkname) {
+		this.drinkname = drinkname;
+	}
+
+	public int getDrinkprice() {
+		return drinkprice;
+	}
+
+	public void setDrinkprice(int drinkprice) {
+		this.drinkprice = drinkprice;
+	}
+
+	
+
+
 	
 	
 	

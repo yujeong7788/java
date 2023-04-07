@@ -1,8 +1,11 @@
 package JANGYUJEONG.submit09;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cafe {
 	String cafename;
-	Coffee drinklist;
+	List<Coffee> dirinklist = new ArrayList<>();
 	
 	
 	// 생성자
@@ -16,14 +19,14 @@ public class Cafe {
 	
 	public void addCoffee(Coffee coffee) {
 		//this.cafename = cafename;
-		this.drinklist = coffee;
+		dirinklist.add(coffee);
 	}
 	
 	
 	// toString
 	@Override
 	public String toString() {
-		return "Cafe [cafename=" + cafename + ", drinklist=" + drinklist + "]";
+		return "Cafe [cafename=" + cafename + ", drinklist=" + dirinklist.toString() + "]";
 	}
 	
 	
