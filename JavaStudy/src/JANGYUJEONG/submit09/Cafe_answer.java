@@ -22,8 +22,8 @@ public class Cafe_answer {
 	}
 
 	// 커피 메뉴를 추가한다
-	public void addCoffee(Coffee cf) {
-		menuList.add(cf);
+	public void addCoffee(Coffee cafe_answer) {
+		menuList.add(cafe_answer);
 		
 	}
 	
@@ -42,8 +42,7 @@ public class Cafe_answer {
 		int choice = Integer.parseInt(sc.nextLine());
 		
 		System.out.println(menuList.get(choice - 1).getName()+"를"+ menuList.get(choice - 1).getPrice()+"원에 구입했습니다." );
-		menuList.get(choice - 1).getName();
-		menuList.get(choice - 1).getPrice();
+
 	}
 	
 	@Override
@@ -63,7 +62,7 @@ public class Cafe_answer {
 	public void setMenuList(ArrayList<Coffee> menuList) {
 		this.menuList = menuList;
 	}
-	
+
 	
 	
 
