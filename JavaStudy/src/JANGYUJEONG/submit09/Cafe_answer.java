@@ -63,7 +63,7 @@ public class Cafe_answer {
 		this.menuList = menuList;
 	}
 
-	
+	///
 	
 
 }
