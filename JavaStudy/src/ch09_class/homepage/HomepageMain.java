@@ -8,6 +8,7 @@ public class HomepageMain {
 	
 
 		MemberDB memDB = MemberDB.getInstance();
+		BoardDB boardDB = BoardDB.getInstance();
 //		MemberDB memDB = MemberDB.instance; // 직접 접근하니까 변할 수 있ㅇ
 		memDB.showMemberList();
 		
@@ -56,11 +57,61 @@ public class HomepageMain {
 					System.out.println("로그인 성공!");
 					System.out.println(login.getName()+"님환영합니다.");
 					
-					//게시판
-					//게시판목록
-					//글쓰기
-					//글조회
-					//로그아웃
+					// 게시판
+					// 게시판목록
+					// 글쓰기 (글 제목, 글 내용, 작성자, 글 번호)
+					// 글조회
+					// 로그아웃
+					while(true) {
+						// 게시물 목록 출력
+						boardDB.showBoardList();
+						System.out.println("행동을 선택해주세요");
+						System.out.println("1. 글쓰기 | 2. 글조회 | 3. 로그아웃");
+						System.out.println(">>>");
+						
+						int select = Integer.parseInt(scan.nextLine());
+						
+						
+						
+						if(select == 1) {
+							//TODO 글쓰기
+							System.out.println("글 제목을 입력해주세요.");
+							System.out.println(">>>");
+							String title = scan.nextLine();
+							
+							System.out.println("글 내용을 입력해주세요");
+							System.out.println(">>>");
+							String content = scan.nextLine();
+							
+							Board board = new Board(0, title, content, login.getId());
+							boardDB.addBoard(board);
+							
+							
+							
+						}else if(select == 2) {
+							//TODO 글조회
+							System.out.println("글 번호를 입력해주세요");
+							System.out.println(">>>");
+							
+							int no = Integer.parseInt(scan.nextLine());
+							
+							// 1 
+							// 제목: 공지사항 필독
+							// 작성자: admin
+							// ========================================
+							// 욕설 금지
+							boardDB.selectBoard(no);
+							
+							
+							
+						}else {
+							// 로그아웃
+							break;
+						}
+						
+					}
+					
+					
 				}else{
 					System.out.println("아이디 혹은 비밀번호가 틀립니다.");
 				}

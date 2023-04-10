@@ -40,7 +40,17 @@ public class MemberDB {
 	
 	// 회원가입 메소드
 	public void registMember(Member mem) {
+		// 파라미터로 들어온 mem 객체에 대해
+		// mem.getId() 가 memList.get(i).getId() 와 같은게 
+		// 있다면 아이디가 중복되므로 회원가입 안시켜줌
+		for(int i = 0; i < memList.size(); i++) {
+			if(mem.getId().equals(memList.get(i).getId())){
+				System.out.println("중복된 아이디 입니다.");
+				return;
+			}
+		}
 		memList.add(mem);
+		
 	}
 	
 	//memList에서 파라미터로 들어온
