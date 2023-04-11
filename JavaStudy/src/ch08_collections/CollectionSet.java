@@ -57,7 +57,7 @@ public class CollectionSet {
 		
 		// 2. 향상된 for문 사용
 		for(String stu : stuSet) {
-			System.out.println(stu);
+			System.out.println("stu"+stu);
 		}
 		
 		System.out.println("\n==========forEach=============\n");

@@ -188,7 +188,7 @@ public class CollectionList {
 		// 인덱스가 존재하는 ArrayList에서는
 		// 향상된 for문의 사용이 큰 메리트가 있지는 않다.
 		
-		System.out.println("\n======================================\n");
+		System.out.println("\n===================forEach===================\n");
 		
 		// 자바의 forEach문 (별로임)
 		students.forEach(new Consumer<String>() {
@@ -200,7 +200,7 @@ public class CollectionList {
 			
 		});
 		
-		System.out.println("\n======================================\n");
+		System.out.println("\n=================람다식=====================\n");
 		
 		// 람다식으로 사용하기
 		students.forEach(t -> System.out.println(t));
