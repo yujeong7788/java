@@ -59,7 +59,7 @@ public class CollectionMap {
 		// .remove(key)
 		// 괄호 안 key값에 대한 데이터 삭제
 		coinMap.remove("도지코인");
-		System.out.println(coinMap);
+		System.out.println("remove " + coinMap);
 		
 		System.out.println("\n======================================\n");
 		
