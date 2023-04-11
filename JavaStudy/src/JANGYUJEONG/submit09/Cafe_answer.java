@@ -35,13 +35,13 @@ public class Cafe_answer {
 	}
 	
 	// 커피 구매 메소드
-	public void buyCoffee(Scanner sc);{
+	public void buyCoffee(Scanner sc){
 		
 		System.out.print("메뉴를 선택해주세요 : ");
 		
 		int choice = Integer.parseInt(sc.nextLine());
 		
-		System.out.println(menuList.get(choice - 1).getName()+"를"+ menuList.get(choice - 1).getPrice()+"원에 구입했습니다." );
+		System.out.println(menuList.get(choice - 1).getDrinkname()+"를"+ menuList.get(choice - 1).getDrinkprice()+"원에 구입했습니다." );
 
 	}
 	

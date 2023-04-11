@@ -27,7 +27,7 @@ public class CafeMain {
 			if(select == 1) {
 				System.out.println("어서오세요 스타벅스입니다.");
 				System.out.println("메뉴판");
-				System.out.println(starBucks.drinklist);
+				System.out.println(starBucks.drinklist());
 				System.out.println("메뉴를 선택해주세요: ");
 				int selectMenu = Integer.parseInt(sc.nextLine());
 				

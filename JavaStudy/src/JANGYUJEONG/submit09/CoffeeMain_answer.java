@@ -63,14 +63,14 @@ public class CoffeeMain_answer {
 //		}
 		
 		Cafe_answer starBucks = new Cafe_answer("스타벅스");
-		starBucks.addCoffee(new Cafe_answer("아메리카노", 5000));
-		starBucks.addCoffee(new Cafe_answer("카푸치노", 6000));
-		starBucks.addCoffee(new Cafe_answer("오곡라떼", 7000));
+		starBucks.addCoffee(new Coffee("아메리카노", 5000));
+		starBucks.addCoffee(new Coffee("카푸치노", 6000));
+		starBucks.addCoffee(new Coffee("오곡라떼", 7000));
 		
 		Cafe_answer conte = new Cafe_answer("꽁떼");
-		conte.addCoffee(new Cafe_answer("아메리카노", 2500));
-		conte.addCoffee(new Cafe_answer("바닐라라떼", 3000));
-		conte.addCoffee(new Cafe_answer("아이스티", 3500));
+		conte.addCoffee(new Coffee("아메리카노", 2500));
+		conte.addCoffee(new Coffee("바닐라라떼", 3000));
+		conte.addCoffee(new Coffee("아이스티", 3500));
 		
 		Scanner sc = new Scanner(System.in);
 		

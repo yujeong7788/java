@@ -9,13 +9,14 @@ public class ArrayMain {
 
 	public static void main(String[] args) throws NoSuchAlgorithmException {
 		// 배열(Array)
-		
+		System.out.println("===여기 charAT 시작====");
 		String samjang = "삼장";
-		samjang.charAt(1);
+		samjang.charAt(1); // 장
 		"삼장".charAt(1);
 		String woogong = "오공";
 		String saojeong = "사오정";
 		String palgye = "저팔계";
+		System.out.println("===여기 charAT 끝====");
 		
 		// 문자열 배열 String[]
 		// 배열의 선언
@@ -24,12 +25,12 @@ public class ArrayMain {
 		String[] seoyugi = new String[4];
 		
 		// .length 배열의 길이 리턴 (메소드는 아님)
-		System.out.println(seoyugi.length);
-		System.out.println(saojeong.length());
+		System.out.println(seoyugi.length); //4
+		System.out.println(saojeong.length()); //3
 		
 		// 배열 내 요소(element) 확인
 		// 인덱스 사용 (= 인덱싱)
-		System.out.println(seoyugi[0]);
+		System.out.println("서유기 인덱스[0] " + seoyugi[0]);
 		
 		
 		// 처음 생성된 배열 내에는 기본값(default)이 들어있다.
@@ -138,7 +139,7 @@ public class ArrayMain {
 		System.out.println("\n==================================\n");
 		
 		// 문자열 나누기
-		String subjects = "자바,SQL,자바스크립트,JSP";
+		String subjects = "자바 ,SQL ,자바스크립트 ,JSP ";
 		
 		// .split(문자열)
 		// 괄호안 문자열을 기준으로 해당 문자열을 나누어
@@ -230,6 +231,8 @@ public class ArrayMain {
 		printArray(numArray);
 		
 		swap(0,1,numArray);
+		printArray(numArray);
+		swap(0,3,numArray);
 		printArray(numArray);
 		
 		// 가끔 면접에서 묻는 문제
@@ -350,12 +353,7 @@ public class ArrayMain {
 		}
 		
 		printArray(numberArray);
-		
-		
-		
-		
-		
-		
+				
 		
 		
 		
