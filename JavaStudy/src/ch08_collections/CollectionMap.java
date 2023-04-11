@@ -66,11 +66,13 @@ public class CollectionMap {
 		// Map 순회
 		// 1. keySet 이용
 		Set<String> keySet = stuMap.keySet();
+		System.out.println("stuMap :" + stuMap);
+		System.out.println("keySet : " +keySet);
 		
 		// 향상된 for문으로 set순회
 		for(String key : keySet) {
-			System.out.println("키" + key);
-			System.out.println("값" + stuMap.get(key));
+			System.out.println("키: " + key);
+			System.out.println("값: " + stuMap.get(key));
 		}
 		
 		// 2. EntrySet 이용
